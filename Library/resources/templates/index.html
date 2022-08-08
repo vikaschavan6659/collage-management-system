@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Home Page</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<style type="text/css">* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body{
+       background-image:url("/Library_management_system/src/main/resources/static/images/library.jpg");
+  }
+  section {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .column {
+    width: 100%;
+    padding: 0 1em 1em 1em;
+    text-align: center;
+  }
+  .card {
+    width: 100%;
+    height: 100%;
+    padding: 2em 1.5em;
+    background: linear-gradient(#ffffff 50%, #575a7b 50%);
+    background-size: 100% 200%;
+    background-position: 0 2.5%;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #575a7b;
+    margin: 1em 0;
+  }
+  p {
+    color: #575a7b;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+  .icon-wrapper {
+    background-color: #575a7b;
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    height: 2.5em;
+    width: 2.5em;
+    color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+  }
+  .card:hover {
+    background-position: 0 100%;
+  }
+  .card:hover .icon-wrapper {
+    background-color: #ffffff;
+    color: #575a7b;
+  }
+  .card:hover h3 {
+    color: #ffffff;
+  }
+  .card:hover p {
+    color: #f0f0f0;
+  }
+  @media screen and (min-width: 768px) {
+    section {
+      padding: 0 2em;
+    }
+    .column {
+      flex: 0 50%;
+      max-width: 50%;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    section {
+      padding: 1em 3em;
+    }
+    .column {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+  }
+	</style>
+</head>
+
+<body >
+
+
+  <div th:insert="fragments/header :: header"></div>
+
+    <section>
+      
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <h3>E-Library</h3>
+            <p>
+              "Books were my path to personal freedom. I learned to read at age 3 and soon discovered there was a whole world to conquer that went beyond our farm in Mississippi."
+                 
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+          <h3> Study Materials & Question papers</h3>
+            <p>
+              Study Material: Notes, Sample Papers, Question Bank, Mind Maps, Books, Novels, Solutions, Maps. Get here free study material for school studies
+            </p>
+            
+            
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h3>The only thing that you absolutely have to know, is the location of the library.<br><br>– Albert Einstein</h3>
+            
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <p><b>Libraries store the energy that fuels the imagination. They open up windows to the world and inspire us to explore and achieve, and contribute to improving our quality of life.
+<br><br>
+– Sidney Sheldon </b></p>
+            
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h3>A library book, I imagine, is a happy book.</h3>
+            <p>
+              There is no problem that a library card can’t solve.
+<br><br>
+– Eleanor Brown
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h3>An original idea. That can’t be too hard. The library must be full of them.<br><br>– Stephen Fry</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     
+
+</body>
+</html>
