@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Staff Information</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+</head>
+<body style="background-color:pink;">
+	<div class="container">
+		<h1>Staff List</h1>
+		
+		<div sec:authorize="isAuthenticated()">
+			Welcome <b><span sec:authentication="name">Username</span></b> &nbsp;
+			<i><span sec:authentication="principal.authorities">Roles</span></i>
+		</div>
+		
+		<form th:action="@{/logout}" method="post">
+			<input type="submit" value="Logout" />
+		</form>
+		
+		<div sec:authorize="hasAnyAuthority('Principal', 'ADMIN')">
+		<a href="/new">Add Staff</a>
+		</div>
+		
+		<table border="1" cellpadding="10">
+			<thead>
+				<tr>
+				    <th>staff_id</th>
+					<th>college ID</th>
+					<th>department</th>
+					<th>StaffName</th>
+					<th>phonenumber</th>
+					<th>Date_of_join</th>
+					<th>salary</th>
+					<th>age</th>
+					<th>gender</th>
+					<th>email</th>
+					<th>address</th>
+					<th sec:authorize="hasAnyAuthority('ADMIN', 'Principal')">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="staff : ${listStaff}">
+					<td th:text="${staff.id}">staff_id</td>
+					<td th:text="${staff.college_Id}">college_id</td>
+					<td th:text="${staff.department}">department</td>
+					<td th:text="${staff.staffName}">Staff_name</td>
+					<td th:text="${staff.phoneNumber}">Staff number</td>
+					<td th:text="${staff.DOJ}">date_of_join</td>
+					<td th:text="${staff.salary}">Staff salary</td>
+					<td th:text="${staff.age}">age</td>
+					<td th:text="${staff.gender}">gender</td>
+					<td th:text="${staff.email}">email</td>
+			        <td th:text="${staff.address}">address</td>
+			        
+
+					<td sec:authorize="hasAnyAuthority('ADMIN', 'principal')">
+						<div sec:authorize="hasAnyAuthority('ADMIN', 'principal')">
+							<a th:href="@{'/edit/' + ${staff.id}}">Edit</a>
+						</div> &nbsp;&nbsp;&nbsp;
+						<div sec:authorize="hasAnyAuthority('ADMIN')">
+							<a th:href="@{'/delete/' + ${staff.id}}">Delete</a>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

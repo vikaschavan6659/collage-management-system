@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Edit Staff</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+</head>
+<body style="background-color:pink;">
+	<div class="container">
+		<h1>Edit Staff</h1>
+		<br />
+		<form action="#" th:action="@{/save}" th:object="${staff}"
+			method="post">
+			<table border="1">
+				
+				<tr>
+					<td>staff_ ID:</td>
+					<td><input type="text" th:field="*{id}" readonly="readonly" />
+					</td>
+				</tr>
+				<tr>
+					<td>college_ ID:</td>
+					<td><input type="text" th:field="*{college_Id}" readonly="readonly" />
+					</td>
+				</tr>
+				
+				<tr>
+					<td>department:</td>
+					<td><input type="text" th:field="*{department}" /></td>
+				</tr>
+				<tr>
+					<td>Staff_name:</td>
+					<td><input type="text" th:field="*{staffName}" /></td>
+				</tr>
+				<tr>
+					<td>Staff_number:</td>
+					<td><input type="text" th:field="*{phoneNumber}" /></td>
+				</tr>
+				<tr>
+					<td>date_of_join:</td>
+					<td><input type="text" th:field="*{DOJ}" /></td>
+				</tr>
+				<tr>
+					<td>Staff_salary:</td>
+					<td><input type="text" th:field="*{salary}" /></td>
+				</tr>
+				<tr>
+					<td>Staff_age:</td>
+					<td><input type="text" th:field="*{age}" /></td>
+				</tr>
+				<tr>
+					<td>gender:</td>
+					<td><input type="text" th:field="*{gender}" /></td>
+				</tr>
+				<tr>
+					<td>Staff_email:</td>
+					<td><input type="text" th:field="*{email}" /></td>
+				</tr>
+				<tr>
+					<td>Staff_address:</td>
+					<td><input type="text" th:field="*{address}" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button type="submit">Save</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
