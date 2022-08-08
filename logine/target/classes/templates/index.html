@@ -1,0 +1,411 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>College management system(Home Page)</title>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap');
+body
+{
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+.open
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+	z-index: 10000;
+}
+.open .layer
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-origin: top;
+	animation: open 1s ease-in-out forwards;
+}
+.open .layer:nth-child(1)
+{
+	background:  linear-gradient(135deg, #FAB2FF 5%, #1904E5 100%);
+	z-index: 1;
+	animation: open 1s ease-in-out forwards;
+	
+}
+@keyframes open
+{
+	0%
+	{
+		transform: scaleY(1);
+	}
+	100%
+	{
+		transform: scaleY(0);
+	}
+}
+section
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.bannerText
+{
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translateY(-50%);
+	max-width: 700px;
+}
+.bannerText h2,
+.bannerText h3
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	transform-origin: left;
+	text-transform: uppercase;
+	transform: scaleX(0);
+	animation: revealTextReverse 1s ease-in-out forwards;
+}
+.bannerText h2
+{
+	font-size: 6em;
+	animation-delay: 5s;
+}
+.bannerText h3
+{
+	font-size: 3em;
+	animation-delay: 3s;
+}
+.bannerText h2:before,
+.bannerText h3:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000;
+	width: 100%;
+	height: 100%;
+	transform-origin: right;
+	animation: revealText 1s ease-in-out forwards;
+	animation-delay: 2s;
+}
+.bannerText h3:before
+{
+	animation-delay: 4s;
+}
+@keyframes revealText
+{
+	0%
+	{
+		transform: scaleX(1);
+	}
+	100%
+	{
+		transform: scaleX(0);
+	}
+}
+@keyframes revealTextReverse
+{
+	0%
+	{
+		transform: scaleX(0);
+	}
+	100%
+	{
+		transform: scaleX(1);
+	}
+}
+.bannerText p
+{
+	opacity: 0;
+	font-weight: 400;
+	font-size: 1.2em;
+	animation: fadeIn 1s linear forwards;
+	animation-delay: 5s;
+}
+@keyframes fadeIn
+{
+	0%
+	{
+		opacity: 0;
+	}
+	100%
+	{
+		opacity: 1;
+	}
+}
+.bannerText a
+{
+	opacity: 0;
+	display: inline-block;
+	margin: 20px 0 0;
+	padding: 10px 20px;
+	background: #000;
+	color: #FAB2FF ;
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 1.2em;
+	letter-spacing: 1px;
+	animation: fadeInBottom 0.5s linear forwards;
+	animation-delay: 5.5s;
+}
+@keyframes fadeInBottom
+{
+	0%
+	{
+		transform: translateY(50px);
+		opacity: 0;
+	}
+	100%
+	{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+.bulb
+{
+	opacity: 0;
+	position: absolute;
+	right: 10%;
+	top: 50%;
+	transform: translateY(-50%);
+	animation: fadeIn 1s linear forwards;
+	animation-delay: 6s;
+	z-index: 100;
+}
+.sci
+{
+	position: absolute;
+	bottom: 15px;
+	right: 30px;
+	display: flex;
+	flex-direction: column;
+}
+.sci li
+{
+	opacity: 0;
+	list-style: none;
+	padding: 10px 0;
+	text-align: center;
+	animation: fadeInBottom 0.5s linear forwards;
+}
+.header ul li:nth-child(1),
+.sci li:nth-child(1)
+{
+	animation-delay: 5s;
+}
+.header ul li:nth-child(2),
+.sci li:nth-child(2)
+{
+	animation-delay: 5.25s;
+}
+.header ul li:nth-child(3),
+.sci li:nth-child(3)
+{
+	animation-delay: 5.5s;
+}
+.header ul li:nth-child(4),
+.sci li:nth-child(4)
+{
+	animation-delay: 5.75s;
+}
+.header ul li:nth-child(5),
+.sci li:nth-child(5)
+{
+	animation-delay: 6s;
+}
+.header ul li:nth-child(6),
+.sci li:nth-child(6)
+{
+	animation-delay: 6.25s;
+}
+.sci li a
+{
+	font-size: 1.2em;
+	color: #000;
+}
+.header
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	padding: 0 10%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+.header .logo
+{
+	opacity: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 2em;
+	text-transform: uppercase;
+	animation: fadeIn 0.5s linear forwards;
+	animation-delay: 5s;
+}
+.header ul
+{
+	margin: 0;
+	padding: 0;
+	z-index: 100;
+	display: flex;
+}
+.header ul li
+{
+	opacity: 0;
+	list-style: none;
+	margin: 0 10px;
+	animation: fadeInRight 0.5s linear forwards;
+}
+.header ul li:last-child
+{
+	margin-right: 0;
+}
+.header ul li a
+{
+	text-decoration: none;
+	font-size: 1.2em;
+	color: #000;
+	padding: 5px 10px;
+	letter-spacing: 2px;
+}
+.header ul li a.active,
+.header ul li a:hover
+{
+	background: #000;
+	color: #FAB2FF ;
+}
+@keyframes fadeInRight
+{
+	0%
+	{
+		transform: translateX(150px);
+		opacity: 0;
+	}
+	100%
+	{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+.element1
+{
+	opacity: 0;
+	position: absolute;
+	bottom: -150px;
+	right: 40%;
+	width: 250px;
+	height: 250px;
+	border: 40px solid #000;
+	animation: rotate 40s linear infinite, fadeIn 1s linear forwards;
+	animation-delay: 7s;
+}
+.element2
+{
+	opacity: 0;
+	position: absolute;
+	left: -10px;
+	top: 40%;
+	width: 50px;
+	height: 50px;
+	border: 2px solid #000;
+	animation: rotate 30s linear infinite, fadeIn 1s linear forwards;
+	animation-delay: 7s;
+}
+@keyframes rotate
+{
+	0%
+	{
+		transform: rotate(45deg);
+	}
+	100%
+	{
+		transform: rotate(405deg);
+	}
+}
+		</style>
+	</head>
+	<body>
+	
+		<div class="open">
+			<div class="layer"></div>
+			<div class="layer"></div>
+		</div>
+		<section>
+			<div class="header">
+				<h2 class="logo">CMS</h2>
+
+				<ul>
+					<li>
+						<a href="#" class="active">Home</a>
+					</li>
+					<li>
+						<a href="About" target="_self" title="takes you to about">
+						About
+						</a>
+					</li>
+					<li>
+						<a href="services">Services</a>
+					</li>
+					<li>
+						<a href="work">My Team & Their Work</a>
+					</li>
+					<li>
+						<a href="login">Login/Register</a>
+					</li>
+					<li>
+						<a href="Contact">Contact Us</a>
+					</li>				
+				</ul>
+			</div>
+			<div class="bannerText">
+				<h3>College Management System</h3><br>
+				<h4><big>makes your work easy</big></h4>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a href="chatbot">Talk with us</a>
+
+			</div>
+			<ul class="sci">
+				<li><a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C589460569891%7Cb%7Cfacebook%20signin%7C&placement=&creative=589460569891&keyword=facebook%20signin&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696221832%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-3821998899%26loc_physical_ms%3D1007740%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQjw852XBhC6ARIsAJsFPN3DCCw1GoA102whtP6pj-qJ4pTDGQOdbXaciY5gnZsH5qffbI0X_dQaAilVEALw_wcB"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/i/flow/login?lang=en"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://www.linkedin.com/feed/?trk=IN-SEM_google-adwords_Jordan-brand-sign-up"><i class="fa fa-linkedin"></i></a></li>
+				<li><a href="https://www.instagram.com/accounts/login/"><i class="fa fa-instagram"></i></a></li>
+				<div style="position: fixed; bottom: 10px; right: 10px;">
+				</script>
+
+				
+				
+			</ul>
+			<div class="element1"></div>
+			<div class="element2"></div>
+		</section>
+	</body>
+</html>
+

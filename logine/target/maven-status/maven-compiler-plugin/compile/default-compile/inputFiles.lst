@@ -1,0 +1,10 @@
+D:\Project\src\main\java\net\javaguides\springboot\model\User.java
+D:\Project\src\main\java\net\javaguides\springboot\web\MainController.java
+D:\Project\src\main\java\net\javaguides\springboot\web\UserRegistrationController.java
+D:\Project\src\main\java\net\javaguides\springboot\service\UserService.java
+D:\Project\src\main\java\net\javaguides\springboot\repository\UserRepository.java
+D:\Project\src\main\java\net\javaguides\springboot\RegistrationLoginSpringBootSecurityThymeleafApplication.java
+D:\Project\src\main\java\net\javaguides\springboot\model\Role.java
+D:\Project\src\main\java\net\javaguides\springboot\web\dto\UserRegistrationDto.java
+D:\Project\src\main\java\net\javaguides\springboot\config\SecurityConfiguration.java
+D:\Project\src\main\java\net\javaguides\springboot\service\UserServiceImpl.java

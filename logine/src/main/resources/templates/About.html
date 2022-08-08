@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About our WebApp</title>
+<style type="text/css">
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans",sans-serif;
+    box-sizing: border-box;
+}
+.open .layer:nth-child(1)
+{
+	background:  linear-gradient(135deg, #9b59b6, #71b7e6);
+	z-index: 2;
+}
+body{
+background-image: linear-gradient(to left top, #fab2ff, #db86f5, #b45bed, #8132e8, #1904e5);
+	color: #9b59b6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+
+.about-section{
+	background: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+    background-size: 100%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 150px;
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.text{
+    font-size: 13px;
+    color: #FAB2FF;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .about-section{    
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about-section{
+        padding: 0;
+    }
+    .inner-container{
+        padding: 60px;
+    }
+}
+</style>
+</head>
+<body>
+>
+    <div class="about-section">
+        <div class="inner-container">
+            <h1>About Us</h1>
+            <p class="text" >
+                <big>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur velit distinctio quibusdam nulla repellendus esse facere quod fugit? Accusantium minima, iure veritatis autem assumenda quidem deleniti necessitatibus ab voluptate rerum?
+                </big>
+                </p>
+            <div class="skills">
+                <span>Time saving</span>
+                <span>Comfortable</span>
+                <span>
+                    <a href="/">Back to homepage</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
