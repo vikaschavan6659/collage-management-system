@@ -3,9 +3,9 @@
 # collage-management-system
 ## Spring Boot Project
 ### Description :
-* This is website to buy automative parts online
+* This is website is use for Collage Activites management
 * User Firendly
-* Adding and managing products
+* Adding and mantain All activites 
 * Single Sign On
 * Chatbot
 * This is a graduate level project developed using Java, Spring Boot, Mysql, etc.
