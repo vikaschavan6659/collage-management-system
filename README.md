@@ -11,16 +11,22 @@
 * This is a graduate level project developed using Java, Spring Boot, Mysql, etc.
 
 ### Admin Module :
-* Add Categories
-* Add Products
+* Add Staff
 * View Users
-* Delete/Update Categories
-* Delete/Update Products 
+* Delete/Update All module
+* Delete/Update all module 
 
-### User Module :
+### Student Module :
 * Register
 * Login 
-* View Product
+* CRUD operaation
+
+### Library Module :
+* Book 
+* Author 
+* Book Categories
+* Publisher
+
 
 
 ### Languages Used :
